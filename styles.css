@@ -1,0 +1,15 @@
+/* === Reset básico === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff0f5; /* rosa pastel */
+    color: #444;
+    line-height: 1.6;
+    padding: 20px;
+  }
+ 

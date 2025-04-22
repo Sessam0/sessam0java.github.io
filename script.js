@@ -1,28 +1,82 @@
-// Este es un ejemplo de JavaScript
-//alert("¡Hola, Mundo!");
+// Selección por ID
+const titulo = document.getElementById('miTitulo');
 
-// Un ejemplo de variable
-let nombre = "Ana";
-let nota_mision1 = 100
-let nota_mision2 = 70
-let nota_mision3 = 90
-alert(nombre);
+// Selección por clase
+const elementos = document.getElementsByClassName('miClase');
+let boton = document.getElementById("miBoton");
+let boton2 = document.getElementById("miBoton2");
+let boton3 = document.getElementById("miBoton3");
+let caja = document.getElementById("miCaja");
 
-// Un ejemplo de función
-function saludar() {
-    alert("¡Hola a todos!");
-}
-saludar();
+let boton4 = document.getElementById("nuevodiv")
+let boton5 = document.getElementById("borrardiv")
 
-function saludar(nombre, apellido) {
-    console.log("¡Hola, " + nombre + " " + apellido + "!");
-}
+boton4.addEventListener("click", function() {
+    const nuevoDiv = document.createElement('div');
+    nuevoDiv.textContent = 'Soy un nuevo DIV';
+    nuevoDiv.classList.add("nuevodiv2")
+    document.body.appendChild(nuevoDiv)
+});
 
-saludar("Ana", "Parra");  // Imprime "¡Hola, Ana!"
+boton5.addEventListener("click", function() {
+    const elementoParaEliminar = document.querySelector('.nuevodiv2');
+    elementoParaEliminar.remove();
+});
 
-function sumar(a, b) {
-    return a + b;
-}
+boton2.addEventListener("click", function() {
+    caja.style.backgroundColor = "pink"
+});
 
-let resultado = sumar(5, 3);
-console.log(resultado);  // Imprime 8
+boton3.addEventListener("click", function() {
+    caja.style.backgroundColor = "grey"
+});
+
+console.log(titulo);
+
+console.log(elementos);
+
+// Seleccionar un elemento
+
+
+// Agregar un evento de clic
+boton.addEventListener("click", function() {
+    alert("¡Botón clickeado :D!");
+});
+
+
+document.addEventListener("keydown", function(evento) {
+    console.log("Tecla presionada: " + evento.key);
+});
+
+//eventos de raton
+
+
+
+//caja.addEventListener("mouseover", function() {
+   //// caja.style.backgroundColor = "pink";
+//});
+
+//caja.addEventListener("mouseout", function() {
+    ///caja.style.backgroundColor = "white";
+//});//
+
+//formularios
+
+const formulario = document.getElementById("miFormulario");
+
+formulario.addEventListener("submit", function(evento) {
+    evento.preventDefault();  // Evita que el formulario se envíe
+    alert("Formulario enviado");
+});
+   
+//modificar contenido
+boton.addEventListener("click", function() {
+    alert("¡Botón clickeado :D!");
+});
+
+// Cambiar el texto de un elemento
+titulo.textContent = 'Nuevo Título Modificado'
+
+// Cambiar el contenido HTML
+parrafo.innerHTML = 'Párrafo Modificado';
+
