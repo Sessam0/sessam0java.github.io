@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fefefe;
+    margin: 0;
+  }
+  
+  .emoji {
+    font-size: 80px;
+    animation: salto 0.8s ease-in-out infinite;
+  }
+  
+  /* Animación de "salto" */
+  @keyframes salto {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+  
